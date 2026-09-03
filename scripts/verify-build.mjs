@@ -8,6 +8,8 @@ const requiredFiles = [
   "dist/brand/wordmark.svg",
   "dist/brand/favicon.svg",
   "dist/apple-touch-icon.png",
+  "dist/og-image.png",
+  "dist/sitemap.xml",
 ];
 
 for (const relativePath of requiredFiles) {
