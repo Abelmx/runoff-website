@@ -1,0 +1,182 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const repositoryUrl = "https://github.com/Abelmx/runoff-website";
+---
+
+<Layout>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Runoff home">
+        <img src="/brand/wordmark.svg" width="140" height="32" alt="run-off" />
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#how-it-works">Product</a>
+        <a href="#research">Research</a>
+        <a href="#local-first">Security</a>
+        <a href={repositoryUrl} target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+      <a class="header-cta" href={repositoryUrl} target="_blank" rel="noopener noreferrer">
+        <span>View source</span><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="product" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span>A second opinion for real code</p>
+          <h1 id="hero-title">Use your favorite agent.<br /><span>Bring in a challenger</span><br />when it matters.</h1>
+          <p class="hero-lede">Run two coding agents on the same task from the same starting point. Compare the result, diff, tests, and trace—then keep the work you prefer.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href={repositoryUrl} target="_blank" rel="noopener noreferrer">View Runoff on GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-note"><span class="mono">local-first</span><span class="note-separator">·</span><span class="mono">runs locally</span><span class="note-separator">·</span><span class="mono">Codex + Claude Code</span></p>
+        </div>
+
+        <div class="hero-product" aria-label="Runoff comparison preview">
+          <div class="product-window">
+            <div class="window-bar">
+              <div class="window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+              <span class="window-title mono">runoff / new comparison</span>
+              <span class="window-live"><span></span>live</span>
+            </div>
+            <div class="task-row">
+              <div><span class="task-label mono">TASK</span><p>Fix the login redirect after authentication</p></div>
+              <span class="task-branch mono">main&nbsp; @ &nbsp;8e2ac1</span>
+            </div>
+            <div class="lanes">
+              <article class="lane lane-favorite">
+                <div class="lane-heading"><span class="agent-pip pip-blue"></span><span class="lane-kicker mono">YOUR AGENT</span><strong>Codex</strong><span class="lane-state state-running mono">running</span></div>
+                <div class="lane-events">
+                  <div class="event event-done"><span>✓</span><code>Reading auth.ts</code><time>00:42</time></div>
+                  <div class="event event-done"><span>✓</span><code>Edited middleware.ts</code><time>01:18</time></div>
+                  <div class="event event-active"><span class="event-pulse"></span><code>Running tests</code><time>02:04</time></div>
+                </div>
+                <div class="lane-footer"><span class="mono">3 files changed</span><span class="lane-bar"><i></i></span></div>
+              </article>
+              <article class="lane lane-challenger">
+                <div class="lane-heading"><span class="agent-pip pip-ink"></span><span class="lane-kicker mono">CHALLENGER</span><strong>Claude Code</strong><span class="lane-state state-queued mono">queued</span></div>
+                <div class="lane-events lane-events-muted">
+                  <div class="event"><span>—</span><code>Waiting for a clean start</code><time>00:00</time></div>
+                  <div class="event"><span>—</span><code>Independent worktree</code><time>—</time></div>
+                  <div class="event"><span>—</span><code>Ready when you are</code><time>—</time></div>
+                </div>
+                <div class="lane-footer"><span class="mono">same starting point</span><span class="lane-bar"><i></i></span></div>
+              </article>
+            </div>
+            <div class="comparison-strip"><span class="mono">COMPARE</span><span class="strip-line"></span><span class="strip-copy">Result&nbsp;&nbsp;·&nbsp;&nbsp;Diff&nbsp;&nbsp;·&nbsp;&nbsp;Tests&nbsp;&nbsp;·&nbsp;&nbsp;Trace</span><span class="strip-arrow" aria-hidden="true">↗</span></div>
+          </div>
+          <p class="product-caption"><span class="mono">01</span> Same task. Separate worktrees. No blind spots.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-intro section-intro-row">
+          <div><p class="eyebrow">The workflow</p><h2 id="how-title">Work. Challenge.<br /><em>Compare.</em></h2></div>
+          <p class="section-summary">Your default agent stays the default. Runoff adds a second opinion only when the work deserves one.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number mono">01</span><div class="step-icon step-icon-work" aria-hidden="true"><span></span><span></span><span></span></div><h3>Work with your agent</h3><p>Keep using the coding agent you already trust. Start from the repo and context you know.</p></article>
+          <article class="step-card step-card-challenge"><span class="step-number mono">02</span><div class="step-icon step-icon-fork" aria-hidden="true"><span></span><span></span><span></span></div><h3>Bring in a challenger</h3><p>Run a second agent independently from the same project state, in its own clean worktree.</p></article>
+          <article class="step-card"><span class="step-number mono">03</span><div class="step-icon step-icon-keep" aria-hidden="true"><span></span><span></span><span></span></div><h3>Keep the better work</h3><p>Review results, diffs, tests, and traces. Vote, then apply the result you choose.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compare-section" id="compare" aria-labelledby="compare-title">
+      <div class="container compare-layout">
+        <div class="comparison-ui" aria-label="Comparison result preview">
+          <div class="compare-ui-head"><div><span class="eyebrow"><span class="eyebrow-dot"></span>Sample review · identity hidden</span><h3>auth-redirect</h3></div><span class="mono compare-id">run_0142</span></div>
+          <div class="compare-tabs" role="tablist" aria-label="Comparison views">
+            <button class="tab is-active" id="tab-result" type="button" role="tab" aria-selected="true" aria-controls="panel-result" data-tab="result">Result</button>
+            <button class="tab" id="tab-diff" type="button" role="tab" aria-selected="false" aria-controls="panel-diff" data-tab="diff">Diff</button>
+            <button class="tab" id="tab-trace" type="button" role="tab" aria-selected="false" aria-controls="panel-trace" data-tab="trace">Trace</button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel is-active" id="panel-result" role="tabpanel" aria-labelledby="tab-result" data-panel="result">
+              <div class="result-grid result-grid-head"><span></span><span class="result-agent"><i class="agent-pip pip-blue"></i>Attempt A</span><span class="result-agent"><i class="agent-pip pip-ink"></i>Attempt B</span></div>
+              <div class="result-grid"><span>Tests</span><strong class="pass">PASS</strong><strong class="pass">PASS</strong></div>
+              <div class="result-grid"><span>Files changed</span><strong>3</strong><strong>6</strong></div>
+              <div class="result-grid"><span>Duration</span><strong class="mono">4m 21s</strong><strong class="mono">7m 08s</strong></div>
+              <div class="result-grid"><span>Tokens</span><strong class="mono">82K</strong><strong class="mono">121K</strong></div>
+              <div class="result-preference"><span class="mono">PREFERRED</span><span class="preference-track"><i></i></span><strong>Codex</strong><span class="mono">your call</span></div>
+            </div>
+            <div class="tab-panel" id="panel-diff" role="tabpanel" aria-labelledby="tab-diff" data-panel="diff" hidden>
+              <div class="diff-file mono"><span class="diff-add">+12</span><span class="diff-remove">−4</span><span>middleware.ts</span></div>
+              <pre class="diff-code"><code><span class="diff-muted">@@ auth redirect @@</span>
+<span class="diff-remove">- return next(request)</span>
+<span class="diff-add">+ const target = new URL(request.url)</span>
+<span class="diff-add">+ target.pathname = "/login"</span>
+<span class="diff-add">+ return Response.redirect(target)</span></code></pre>
+              <p class="panel-foot mono">A clean, reviewable change set.</p>
+            </div>
+            <div class="tab-panel" id="panel-trace" role="tabpanel" aria-labelledby="tab-trace" data-panel="trace" hidden>
+              <div class="trace-row"><span class="trace-time mono">00:42</span><span class="trace-line"><i></i></span><span>Read <code>auth.ts</code></span></div>
+              <div class="trace-row"><span class="trace-time mono">01:18</span><span class="trace-line"><i></i></span><span>Edited <code>middleware.ts</code></span></div>
+              <div class="trace-row"><span class="trace-time mono">02:04</span><span class="trace-line"><i></i></span><span>Ran <code>pnpm test</code></span></div>
+              <div class="trace-row trace-row-last"><span class="trace-time mono">04:21</span><span class="trace-line"><i></i></span><span>All checks passed</span></div>
+              <p class="panel-foot mono">A timeline of the work, not a chat transcript.</p>
+            </div>
+          </div>
+        </div>
+        <div class="compare-copy"><p class="eyebrow">What you actually compare</p><h2 id="compare-title">Compare the work,<br /><em>not the brand.</em></h2><p>A blind A/B review keeps the choice grounded in the task. See each result, unified diff, verification output, and run metrics before identities are revealed.</p><a class="text-link" href={repositoryUrl} target="_blank" rel="noopener noreferrer">See the source <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="local-section" id="local-first" aria-labelledby="local-title">
+      <div class="container local-layout">
+        <div class="local-copy"><p class="eyebrow eyebrow-light"><span class="eyebrow-dot"></span>A trust anchor</p><h2 id="local-title">Your code stays<br /><em>on your machine.</em></h2><p>Runoff’s MVP runs Local Only: it does not upload prompts, source code, diffs, trajectories, or votes.</p><p class="local-share">Share nothing by default.</p></div>
+        <div class="local-map" aria-label="Data stays local diagram"><div class="map-origin"><span class="map-dot"></span><span class="mono">YOUR MACHINE</span></div><div class="map-paths" aria-hidden="true"><span class="map-path map-path-left"></span><span class="map-path map-path-right"></span></div><div class="map-nodes"><div><strong>Code</strong><span class="mono">local</span></div><div><strong>Task</strong><span class="mono">local</span></div><div><strong>Trace</strong><span class="mono">local</span></div><div><strong>Diff</strong><span class="mono">local</span></div><div><strong>Vote</strong><span class="mono">local</span></div></div><div class="map-foot mono">NO UPLOAD REQUIRED</div></div>
+      </div>
+    </section>
+
+    <section class="section research-section" id="research" aria-labelledby="research-title">
+      <div class="container research-layout">
+        <div class="research-copy"><p class="eyebrow">Under the surface</p><h2 id="research-title">Real work becomes<br /><em>real evaluation.</em></h2><p>Every comparison starts with work you actually need done. Your vote builds a personal record of which agent stack works for your tasks.</p><div class="research-equation mono"><span>task</span><b>×</b><span>agent stack</span><b>×</b><span>trajectory</span><b>×</b><span>outcome</span><b>×</b><span>preference</span></div><a class="text-link" href={repositoryUrl} target="_blank" rel="noopener noreferrer">Read the approach <span aria-hidden="true">↗</span></a></div>
+        <div class="research-diagram" aria-label="Evaluation flow"><div class="diagram-label mono">THE LOOP</div><div class="diagram-step"><span class="diagram-index">01</span><strong>Real task</strong><small>your repository, your constraint</small></div><div class="diagram-connector" aria-hidden="true">↓</div><div class="diagram-step"><span class="diagram-index">02</span><strong>Independent runs</strong><small>same start, separate paths</small></div><div class="diagram-connector" aria-hidden="true">↓</div><div class="diagram-step"><span class="diagram-index">03</span><strong>Result + diff + trace</strong><small>evidence you can inspect</small></div><div class="diagram-connector" aria-hidden="true">↓</div><div class="diagram-step diagram-step-final"><span class="diagram-index">04</span><strong>Human preference</strong><small>the only ranking that matters</small></div></div>
+      </div>
+    </section>
+
+    <section class="download-section" id="download" aria-labelledby="download-title">
+      <div class="container download-inner"><div class="download-mark" aria-hidden="true"><img src="/brand/logo-mark.svg" width="54" height="54" alt="" /></div><p class="eyebrow eyebrow-light">The next run is yours</p><h2 id="download-title">When the task matters,<br /><em>run two.</em></h2><p>Start from a clean Git repository. Choose Codex and Claude Code, review both attempts, and apply the one you want to keep.</p><div class="download-actions"><a class="button button-light" href={repositoryUrl} target="_blank" rel="noopener noreferrer">View source on GitHub <span aria-hidden="true">↗</span></a><a class="button button-outline-light" href="#how-it-works">Read the workflow <span aria-hidden="true">↓</span></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="/" aria-label="Runoff home"><img src="/brand/wordmark.svg" width="140" height="32" alt="run-off" /></a><p class="footer-note">A quiet second opinion for real code.</p><div class="footer-links"><a href="#product">Product</a><a href="#research">Research</a><a href="#local-first">Local first</a><a href={repositoryUrl} target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><p class="footer-legal mono">© {new Date().getFullYear()} run-off</p></div></footer>
+</Layout>
+
+<script>
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-tab]"));
+  const panels = Array.from(document.querySelectorAll<HTMLElement>("[data-panel]"));
+
+  function activateTab(name: string) {
+    tabs.forEach((tab) => {
+      const active = tab.dataset.tab === name;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", String(active));
+    });
+    panels.forEach((panel) => {
+      const active = panel.dataset.panel === name;
+      panel.classList.toggle("is-active", active);
+      panel.hidden = !active;
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activateTab(tab.dataset.tab ?? "result"));
+    tab.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+      event.preventDefault();
+      const offset = event.key === "ArrowRight" ? 1 : -1;
+      tabs[(index + offset + tabs.length) % tabs.length]?.focus();
+    });
+  });
+</script>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">run-off</title>
+  <path
+    d="M32 7v12M32 19 12 31v13L32 57M32 19l20 12v13L32 57"
+    fill="none"
+    stroke="#3F62D7"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
